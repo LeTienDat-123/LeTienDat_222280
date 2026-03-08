@@ -4,6 +4,8 @@ CHƯƠNG 1 : GIỚI THIỆU
 Trong bối cảnh đô thị hóa diễn ra mạnh mẽ tại Việt Nam, đặc biệt ở các thành phố lớn như TP. Hồ Chí Minh và Hà Nội, nhà chung cư đã trở thành hình thức nhà ở phổ biến và chủ đạo đối với người dân. Theo các báo cáo gần đây, số lượng chung cư tăng nhanh chóng, tuy nhiên công tác quản lý vận hành vẫn tồn tại nhiều bất cập lớn. Các vấn đề phổ biến bao gồm: thiếu minh bạch trong thu chi quỹ bảo trì (2%), mâu thuẫn giữa cư dân - ban quản trị - chủ đầu tư, quản lý hợp đồng thuê và hóa đơn thủ công dễ sai sót, theo dõi bảo trì căn hộ chậm trễ, khó khăn trong việc thống kê tình trạng sử dụng căn hộ, doanh thu và báo cáo tổng quan.
 Hiện nay, phần lớn các chung cư vẫn áp dụng phương pháp quản lý truyền thống (sổ sách giấy, Excel riêng lẻ hoặc phần mềm nước ngoài đắt đỏ, không tùy chỉnh phù hợp). Điều này dẫn đến hiệu quả thấp, mất thời gian, dễ phát sinh tranh chấp pháp lý và ảnh hưởng đến chất lượng cuộc sống của cư dân. Việc ứng dụng công nghệ thông tin, đặc biệt là phát triển phần mềm quản lý chuyên dụng, được xem là giải pháp cần thiết để số hóa quy trình, tăng tính minh bạch, giảm thiểu sai sót và nâng cao hiệu quả quản lý.
 Đề tài “Xây dựng hệ thống quản lý chung cư bằng Java Swing” ra đời nhằm giải quyết một phần các hạn chế trên. Hệ thống được thiết kế với giao diện thân thiện, dễ sử dụng, tập trung vào các chức năng cốt lõi như quản lý tòa nhà - căn hộ - cư dân - hợp đồng - hóa đơn - bảo trì, thống kê báo cáo và theo dõi hoạt động người dùng. Sử dụng công nghệ Java Swing kết hợp cơ sở dữ liệu (thường là MySQL hoặc SQLite), hệ thống hướng đến đối tượng là ban quản lý chung cư quy mô vừa và nhỏ, giúp tự động hóa quy trình, hỗ trợ ra quyết định nhanh chóng dựa trên dữ liệu thực tế.
+
+
 1.2 Mục tiêu đề tài
 Mục tiêu tổng quát của đề tài là xây dựng một hệ thống phần mềm ứng dụng desktop (sử dụng ngôn ngữ lập trình Java với giao diện Swing) hỗ trợ tự động hóa các quy trình quản lý hành chính, tài chính và cư dân tại các chung cư quy mô vừa và nhỏ, từ đó nâng cao hiệu quả vận hành, tăng tính minh bạch, giảm thiểu tranh chấp và hỗ trợ ban quản lý ra quyết định nhanh chóng dựa trên dữ liệu thực tế.
 Mục tiêu cụ thể bao gồm các nội dung sau:
@@ -12,13 +14,17 @@ Mục tiêu cụ thể bao gồm các nội dung sau:
 3.	Hỗ trợ thống kê, báo cáo và theo dõi hoạt động: Xây dựng các báo cáo chi tiết về tình trạng căn hộ, hợp đồng, hóa đơn, doanh thu tổng quan và lịch sử hoạt động (log) của người dùng. Mục tiêu là cung cấp công cụ phân tích dữ liệu giúp ban quản lý nắm bắt tình hình nhanh chóng, dự báo xu hướng (ví dụ: căn hộ trống nhiều → điều chỉnh chính sách) và tăng tính minh bạch trong quản lý.
 4.	Đảm bảo tính bảo mật, toàn vẹn dữ liệu và dễ bảo trì: Áp dụng phân quyền người dùng, mã hóa mật khẩu, ghi log hoạt động, cùng với thiết kế cơ sở dữ liệu quan hệ (MySQL/SQLite) đạt chuẩn 3NF và các ràng buộc toàn vẹn để bảo vệ thông tin cá nhân cư dân, hợp đồng và tài chính. Hệ thống được xây dựng theo kiến trúc phân lớp (MVC hoặc 3-layer), dễ mở rộng và bảo trì trong tương lai.
 5.	Đóng góp vào việc ứng dụng công nghệ thông tin trong quản lý chung cư: Đề tài hướng đến việc cung cấp một giải pháp phần mềm mã nguồn mở (hoặc tùy chỉnh) chi phí thấp, phù hợp với các chung cư quy mô vừa và nhỏ tại Việt Nam, góp phần cải thiện chất lượng quản lý vận hành theo hướng hiện đại, chuyên nghiệp, đồng thời làm nền tảng cho các phát triển tiếp theo (web hóa, tích hợp mobile).
+
+
 1.3  Đối tượng và phạm vi của đề tài
+
 1.3.1 Đối tượng 
 Đối tượng chính của đề tài là hệ thống quản lý và vận hành nhà chung cư (Apartment Management System), tập trung vào các hoạt động quản lý nội bộ của ban quản lý (BQL) chung cư. Cụ thể bao gồm:
 •	Các thực thể chính: tòa nhà, tầng, căn hộ, cư dân (người thuê/đại diện gia đình), hợp đồng thuê, hóa đơn dịch vụ, yêu cầu bảo trì, thẻ an ninh.
 •	Các quy trình nghiệp vụ: đăng nhập/đăng ký người dùng, tạo/chấm dứt hợp đồng, theo dõi bảo trì, tính toán hóa đơn, thống kê mức độ sử dụng căn hộ, doanh thu, báo cáo tổng quan.
 •	Người sử dụng hệ thống: chủ yếu là nhân viên ban quản lý (quản trị viên, nhân viên hành chính, kế toán), và một phần hỗ trợ xem thông tin cá nhân/lịch sử hoạt động cho cư dân (nếu đăng nhập).
 Đề tài không tập trung vào hệ thống quản lý kỹ thuật tòa nhà (BMS - Building Management System) như điều khiển thang máy, điện nước, PCCC, mà chủ yếu giải quyết khía cạnh quản lý hành chính - tài chính - cư dân.
+
 1.3.2 Phạm vi
 Phạm vi nghiên cứu và triển khai của đề tài được giới hạn như sau:
 •	Phạm vi chức năng: Hệ thống hỗ trợ đầy đủ các chức năng chính sau (dựa trên yêu cầu đề tài):
@@ -34,6 +40,7 @@ Phạm vi nghiên cứu và triển khai của đề tài được giới hạn 
 •	Phạm vi công nghệ: Sử dụng ngôn ngữ lập trình Java với giao diện đồ họa Swing, kết hợp cơ sở dữ liệu quan hệ (MySQL/SQLite), không hỗ trợ web hoặc mobile (chỉ ứng dụng desktop).
 •	Phạm vi đối tượng áp dụng: Phù hợp với các chung cư quy mô vừa và nhỏ (dưới 500 căn hộ), do một ban quản lý duy nhất vận hành. Không bao gồm tích hợp thanh toán online, ứng dụng cư dân di động, hay quản lý nhiều tòa nhà phân tán ở các tỉnh thành khác nhau.
 •	Giới hạn: Không triển khai tính năng quản lý tài sản chung (quỹ bảo trì 2%), tích hợp camera/an ninh vật lý, hay xử lý tranh chấp pháp lý.
+
 1.4 Các bước thực hiện 
 Để hoàn thành đồ án, các bước thực hiện được tiến hành theo quy trình phát triển phần mềm cơ bản, bao gồm:
 1.	Nghiên cứu và phân tích yêu cầu:
