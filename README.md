@@ -66,3 +66,5 @@ Phạm vi nghiên cứu và triển khai của đề tài được giới hạn 
 1.	Đánh giá ưu nhược điểm hệ thống.
 2.	Đề xuất hướng phát triển tiếp theo (web hóa, tích hợp mobile, thêm tính năng nâng cao).
 
+
+
