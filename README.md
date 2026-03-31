@@ -70,3 +70,7 @@ Phạm vi nghiên cứu và triển khai của đề tài được giới hạn 
 
 demo đồ án 2
 https://drive.google.com/file/d/1g1fFIIySDtZXYK4NSktZ0IIrRgVveA0R/view?usp=drive_link
+
+
+tài khoản admin 
+mật khẩu 123
